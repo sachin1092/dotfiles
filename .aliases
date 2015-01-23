@@ -1,0 +1,84 @@
+# Functions
+makennav() {
+	mkdir $1
+	cd $1
+}
+
+javarc() {
+	javac $1
+	var=$1
+	len=$(expr ${#var} - 5)
+	java ${var:0:len}
+	var2=".class"
+	rm ${var:0:len}${var2}
+}
+
+deploy() {
+	cd /mnt/Games/WORK_SEARCE/HappierHR/happierhr/app/components/deployment_development/
+	python env_setup.py $1 $2
+}
+
+# Apt
+alias install="sudo apt-get install"
+alias update="sudo apt-get update"
+alias upgrade="sudo apt-get upgrade"
+alias asearch="apt-cache search"
+
+# Hotspot and net
+alias starthotspot="sudo ap-hotspot start"
+alias stophotspot="sudo ap-hotspot stop"
+alias startmts="sudo wvdial mts"
+
+# Power
+alias monitoroff="xset dpms force off"
+alias poweroff="sudo shutdown -h now"
+
+# Android
+alias adbc="adb connect"
+alias adbdc="adb disconnect"
+alias adbcon="adb tcpip 5555 && adb connect"
+
+# Other
+alias server="python -m SimpleHTTPServer"
+alias rmlock="sudo rm /var/lib/apt/lists/lock"
+alias grepsel="dpkg --get-selections | grep"
+alias copy="xclip -selection c"
+alias epath='echo $PATH | tr ":" "\n"'
+alias ls="ls --color=auto"
+alias filemanager="nemo"
+alias mkcd=makennav
+alias exechappierHR="python ~/google_appengine/dev_appserver.py /mnt/Games/WORK_SEARCE/HappierHR/happierhr/ --datastore_path /mnt/Games/WORK_SEARCE/HappierHR/db/db.sqllite"
+alias deployHR=deploy
+
+
+# Git
+alias gi="git init"
+alias ga="git add"
+alias gp="git push"
+alias gl="git log"
+alias glp="git log -p --color"
+alias glo="git log --oneline"
+alias gs="git status"
+alias gd="git diff --color"
+alias gdc="gd --cached"
+alias gc="git commit"
+alias gcm="git commit -m"
+alias gma="git commit -am"
+alias gca="git commit --amend"
+alias gb="git branch"
+alias gbd="git branch -d"
+alias gch="git checkout"
+alias gcf="git checkout --force"
+alias gcb="git checkout -b"
+alias gct="git checkout --track"
+alias gm="git merge"
+alias gra="git remote add"
+alias grr="git remote rm"
+alias gpu="git pull"
+alias gcl="git clone"
+alias gce="git clean -fd"
+alias gsi="git submodule init"
+alias gsa="git submodule add"
+alias gsu="git submodule update"
+alias gus="git submodule foreach git pull origin master"
+alias guc="git reset --soft HEAD"
