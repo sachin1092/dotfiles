@@ -1,0 +1,24 @@
+android-studio
+archey-0.2.8.deb
+banish404_0.1-4_all.deb
+conky-manager
+Desktop
+Documents
+Downloads
+faenze icon
+firefox
+fontconfig
+genymotion
+gnome-terminal-colors-solarized
+google_appengine
+google-appengine-wx-launcher-read-only
+guake-colors-solarized
+gyb
+Music
+ngrok
+OpenDownloads.sh
+OpenMovies.sh
+Pictures
+VirtualBox VMs
+websites
+WebStorm-135.1063
