@@ -8,7 +8,7 @@ echo "\n"
 while read line
 do
     name=$line
-    echo "Text read from file - $name"
+    echo "Backing up - $name"
 done < home.txt
 
 # for files in `ls`; do
