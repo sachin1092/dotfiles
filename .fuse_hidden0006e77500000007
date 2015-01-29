@@ -1,6 +1,0 @@
-#! /bin/sh
-APPL=`awk "{print $2}" installedapps`
-echo $APPL
-for app in $APPL; do
-	`echo $app`
-done

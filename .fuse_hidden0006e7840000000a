@@ -1,6 +1,0 @@
-#! /bin/sh
-APPL=`awk '{print $2}' installedapps`
-for app in $APPL; do
-	echo "Installing $app..."
-	`echo sudo apt-get install $app`
-done
