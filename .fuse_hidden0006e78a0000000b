@@ -1,0 +1,15 @@
+#! /bin/sh
+echo "Adding PPAs master"
+while read line; do
+	echo "Adding PPA $line..."
+	`echo sudo apt-add-repository -y $app`
+done < repos
+echo "Done adding PPAs"
+
+echo "Installing your apps master"
+APPL=`awk '{print $2}' installedapps`
+for app in $APPL; do
+	echo "Installing $app..."
+	`echo sudo apt-get install -y $app`
+done
+echo "Done installing with apps"

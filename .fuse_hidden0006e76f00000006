@@ -1,0 +1,11 @@
+#! /bin/sh
+while read line
+do
+	echo "$line"
+    HOST=`echo $ENTRY | cut -c`
+    USER=`echo $ENTRY | cut -c" "`
+    PPA=`echo $ENTRY | cut -d/ -f5`
+    echo "HOST - $HOST"
+    echo "USER - $USER"
+    echo "PPA - $PPA"
+done < installedapps
