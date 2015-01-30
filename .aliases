@@ -18,6 +18,34 @@ deploy() {
 	python env_setup.py $1 $2
 }
 
+
+# Rageflip.
+
+# Requirements:
+# Expects toilet to be installed.
+
+rageflip() {
+	echo "(╯°□°）╯︵$(echo "$1" | toilet -f term -F rotate)"
+}
+
+# Proc fucker upper.
+# Infinitely more satisfying kill -9.
+# Got the idea here: https://twitter.com/louroboros/status/412913768998268928
+#
+# USAGE:
+# Make this script executable & stick it somewhere in your $PATH. Then:
+#
+# fuck you <process>
+# Thanks @Prajjwal
+
+fuck() {
+	if killall -9 "$2"; then
+		echo
+		rageflip $2
+		echo
+	fi
+}
+
 # Apt
 alias install="sudo apt-get install"
 alias update="sudo apt-get update"
@@ -82,3 +110,15 @@ alias gsa="git submodule add"
 alias gsu="git submodule update"
 alias gus="git submodule foreach git pull origin master"
 alias guc="git reset --soft HEAD"
+
+#nav alaises
+
+alias cddev="cd /mnt/Games/Development"
+alias cddevdroid="cd /mnt/Games/Development/Android"
+alias cddevJS="cd /mnt/Games/Development/JS"
+alias cddevLisp="cd /mnt/Games/Development/Lisp"
+alias cddevPy="cd /mnt/Games/Development/Python"
+alias cddevRuby="cd /mnt/Games/Development/Ruby"
+alias cddevHL="cd /mnt/Games/Development/Haskell"
+alias cddevCal="cd /mnt/Games/Development/Callizto"
+alias cddevMsc="cd /mnt/Games/Development/Misc"
