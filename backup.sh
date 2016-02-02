@@ -5,6 +5,8 @@ echo "Please enter the backup location, master"
 read LOC
 echo "\n"
 
+#aptitude search '~i!~M'
+
 while read line
 do
     name=$line

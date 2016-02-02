@@ -1,9 +1,4 @@
 # Functions
-
-setLockScreen() {
-	cp $1 /usr/share/mdm/html-themes/ArkhamKnight/bg.jpg
-}
-
 makennav() {
 	mkdir $1
 	cd $1
@@ -17,21 +12,10 @@ javarc() {
 	var2=".class"
 	rm ${var:0:len}${var2}
 }
+
 deploy() {
 	cd /mnt/Games/WORK_SEARCE/HappierHR/happierhr/app/components/deployment_development/
 	python env_setup.py $1 $2
-}
-
-run_invoice() {
-	cd /mnt/Games/WORK_SEARCE/Invoize-Everything
-	source Invoize-env/bin/activate
-	cd Invoize
-	python manage.py runserver
-}
-
-downloader() {
-	cd /mnt/Games/Development/Python/Series_Downloader
-	python local/requester.py
 }
 
 
@@ -138,4 +122,3 @@ alias cddevRuby="cd /mnt/Games/Development/Ruby"
 alias cddevHL="cd /mnt/Games/Development/Haskell"
 alias cddevCal="cd /mnt/Games/Development/Callizto"
 alias cddevMsc="cd /mnt/Games/Development/Misc"
-alias cddevWork="cd /mnt/Games/WORK_SEARCE"
